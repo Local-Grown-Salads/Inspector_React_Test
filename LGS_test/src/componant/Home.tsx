@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import D3LineChart from "./d3Chart";
 
 interface HomeProps {
   setSelectedProps: (props: { statsProps: number }) => void;
@@ -14,6 +15,8 @@ const Home: React.FC<HomeProps> = ({ setSelectedProps }) => {
       <Link to="/stats">
         <button onClick={() => setSelectedProps({ statsProps: 0 })}>Stats</button>
       </Link>
+      <D3LineChart/>
+
     </>
   );
 };
